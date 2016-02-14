@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<info>
+    <id>maillistener</id>
+    <name>Mail Listener</name>
+    <licence>AGPL</licence>
+    <author>lunarok</author>
+    <installation></installation>
+    <require>2.1</require>
+    <category>communication</category>
+    <hasDependency>1</hasDependency>
+    <hasOwnDeamon>1</hasOwnDeamon>
+</info>
