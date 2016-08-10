@@ -102,7 +102,7 @@ class maillistener extends eqLogic {
           } else {
             $return['state'] = 'nok';
             $return['notlaunched'][] = $maillistener->getConfiguration('addr');
-            $return['launchable_message'] = $return['launchable_message'] . ' ' . $maillistener->getConfiguration('addr') . ' non lancé';
+            $return['launchable_message'] = $maillistener->getConfiguration('addr') . ' non lancé';
           }
           if ($maillistener->getConfiguration('addr') == '') {
             $return['launchable'] = 'nok';

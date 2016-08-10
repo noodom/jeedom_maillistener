@@ -9,7 +9,7 @@ $eqLogics = eqLogic::byType('maillistener');
 ?>
 
 <div class="row row-overflow">
-  <div class="col-lg-2 col-md-3 col-sm-4">
+  <div class="col-lg-2 col-sm-3 col-sm-4">
     <div class="bs-sidebar">
       <ul id="ul_eqLogic" class="nav nav-list bs-sidenav">
         <a class="btn btn-default eqLogicAction" style="width : 100%;margin-top : 5px;margin-bottom: 5px;" data-action="add"><i class="fa fa-plus-circle"></i> {{Ajouter un équipement}}</a>
@@ -58,23 +58,32 @@ $eqLogics = eqLogic::byType('maillistener');
 
 
   <div class="col-lg-10 col-md-9 col-sm-8 eqLogic" style="border-left: solid 1px #EEE; padding-left: 25px;display: none;">
-    <div class="row">
-      <div class="col-sm-6">
+
+    <a class="btn btn-success eqLogicAction pull-right" data-action="save"><i class="fa fa-check-circle"></i> {{Sauvegarder}}</a>
+    <a class="btn btn-danger eqLogicAction pull-right" data-action="remove"><i class="fa fa-minus-circle"></i> {{Supprimer}}</a>
+
+    <ul class="nav nav-tabs" role="tablist">
+      <li role="presentation" class="active"><a href="#eqlogictab" aria-controls="home" role="tab" data-toggle="tab"><i class="fa fa-tachometer"></i> {{Equipement}}</a></li>
+      <li role="presentation"><a href="#commandtab" aria-controls="profile" role="tab" data-toggle="tab"><i class="fa fa-list-alt"></i> {{Commandes}}</a></li>
+    </ul>
+
+    <div class="tab-content" style="height:calc(100% - 50px);overflow:auto;overflow-x: hidden;">
+      <div role="tabpanel" class="tab-pane active" id="eqlogictab">
         <form class="form-horizontal">
           <fieldset>
             <legend><i class="fa fa-arrow-circle-left eqLogicAction cursor" data-action="returnToThumbnailDisplay"></i>  {{Général}}
               <i class='fa fa-cogs eqLogicAction pull-right cursor expertModeVisible' data-action='configure'></i>
             </legend>
             <div class="form-group">
-              <label class="col-md-2 control-label">{{Nom de l'maillistener}}</label>
-              <div class="col-md-3">
+              <label class="col-sm-3 control-label">{{Nom de l'maillistener}}</label>
+              <div class="col-sm-3">
                 <input type="text" class="eqLogicAttr form-control" data-l1key="id" style="display : none;" />
                 <input type="text" class="eqLogicAttr form-control" data-l1key="name" placeholder="{{Nom de l'équipement maillistener}}"/>
               </div>
             </div>
             <div class="form-group">
-              <label class="col-md-2 control-label" >{{Objet parent}}</label>
-              <div class="col-md-3">
+              <label class="col-sm-3 control-label" >{{Objet parent}}</label>
+              <div class="col-sm-3">
                 <select class="form-control eqLogicAttr" data-l1key="object_id">
                   <option value="">{{Aucun}}</option>
                   <?php
@@ -86,8 +95,8 @@ $eqLogics = eqLogic::byType('maillistener');
               </div>
             </div>
             <div class="form-group">
-              <label class="col-md-2 control-label">{{Catégorie}}</label>
-              <div class="col-md-8">
+              <label class="col-sm-3 control-label">{{Catégorie}}</label>
+              <div class="col-sm-8">
                 <?php
                 foreach (jeedom::getConfiguration('eqLogic:category') as $key => $value) {
                   echo '<label class="checkbox-inline">';
@@ -99,62 +108,51 @@ $eqLogics = eqLogic::byType('maillistener');
               </div>
             </div>
             <div class="form-group">
-              <label class="col-sm-2 control-label" ></label>
-              <div class="col-sm-9">
-                <input type="checkbox" class="eqLogicAttr bootstrapSwitch" data-label-text="{{Activer}}" data-l1key="isEnable" checked/>
-                <input type="checkbox" class="eqLogicAttr bootstrapSwitch" data-label-text="{{Visible}}" data-l1key="isVisible" checked/>
+              <label class="col-sm-3 control-label" ></label>
+              <div class="col-sm-8">
+                <label class="checkbox-inline"><input type="checkbox" class="eqLogicAttr" data-l1key="isEnable" checked/>{{Activer}}</label>
+                <label class="checkbox-inline"><input type="checkbox" class="eqLogicAttr" data-l1key="isVisible" checked/>{{Visible}}</label>
               </div>
             </div>
 
-
             <div class="form-group">
-              <label class="col-sm-2 control-label">{{Commentaire}}</label>
-              <div class="col-md-8">
+              <label class="col-sm-3 control-label">{{Commentaire}}</label>
+              <div class="col-sm-3">
                 <textarea class="eqLogicAttr form-control" data-l1key="configuration" data-l2key="commentaire" ></textarea>
               </div>
             </div>
 
-          </fieldset>
-
-        </form>
-      </div>
-
-      <div id="infoNode" class="col-sm-6">
-        <form class="form-horizontal">
-          <fieldset>
-            <legend>{{Configuration}}</legend>
-
             <div class="form-group">
-              <label class="col-md-2 control-label">{{Adresse serveur IMAP}}</label>
-              <div class="col-md-3">
+              <label class="col-sm-3 control-label">{{Adresse serveur IMAP}}</label>
+              <div class="col-sm-3">
                 <input type="text" class="eqLogicAttr configuration form-control" data-l1key="configuration" data-l2key="server" placeholder="adresse du serveur"/>
               </div>
             </div>
 
             <div class="form-group">
-              <label class="col-md-2 control-label">{{Port serveur IMAP}}</label>
-              <div class="col-md-3">
+              <label class="col-sm-3 control-label">{{Port serveur IMAP}}</label>
+              <div class="col-sm-3">
                 <input type="text" class="eqLogicAttr configuration form-control" data-l1key="configuration" data-l2key="port" placeholder="993"/>
               </div>
             </div>
 
             <div class="form-group">
-              <label class="col-md-2 control-label">{{Compte Mail}}</label>
-              <div class="col-md-3">
+              <label class="col-sm-3 control-label">{{Compte Mail}}</label>
+              <div class="col-sm-3">
                 <input type="text" class="eqLogicAttr configuration form-control" data-l1key="configuration" data-l2key="username" placeholder="compte"/>
               </div>
             </div>
 
             <div class="form-group">
-              <label class="col-md-2 control-label">{{Mot de Passe}}</label>
-              <div class="col-md-3">
+              <label class="col-sm-3 control-label">{{Mot de Passe}}</label>
+              <div class="col-sm-3">
                 <input class="eqLogicAttr configuration form-control" data-l1key="configuration" data-l2key="password" type="password" placeholder="password"/>
               </div>
             </div>
 
             <div class="form-group">
-              <label class="col-md-2 control-label">{{Traitement des pièces jointes}}</label>
-              <div class="col-md-3">
+              <label class="col-sm-3 control-label">{{Traitement des pièces jointes}}</label>
+              <div class="col-sm-3">
                 <select class="eqLogicAttr configuration form-control" data-l1key="configuration" data-l2key="attach">
                   <option value="true">{{Oui}}</option>
                   <option value="false">{{Non}}</option>
@@ -165,34 +163,25 @@ $eqLogics = eqLogic::byType('maillistener');
           </fieldset>
         </form>
       </div>
+      <div role="tabpanel" class="tab-pane" id="commandtab">
+
+        <table id="table_cmd" class="table table-bordered table-condensed">
+          <thead>
+            <tr>
+              <th style="width: 50px;">#</th>
+              <th style="width: 150px;">{{Nom}}</th>
+              <th style="width: 300px;">{{Valeur}}</th>
+              <th style="width: 100px;">{{Paramètres}}</th>
+              <th style="width: 100px;"></th>
+            </tr>
+          </thead>
+          <tbody>
+
+          </tbody>
+        </table>
+
+      </div>
     </div>
-
-    <legend>{{Informations}}</legend>
-
-    <table id="table_cmd" class="table table-bordered table-condensed">
-      <thead>
-        <tr>
-          <th style="width: 50px;">#</th>
-          <th style="width: 150px;">{{Nom}}</th>
-          <th style="width: 300px;">{{Valeur}}</th>
-          <th style="width: 100px;">{{Paramètres}}</th>
-          <th style="width: 100px;"></th>
-        </tr>
-      </thead>
-      <tbody>
-
-      </tbody>
-    </table>
-
-    <form class="form-horizontal">
-      <fieldset>
-        <div class="form-actions">
-          <a class="btn btn-danger eqLogicAction" data-action="remove"><i class="fa fa-minus-circle"></i> {{Supprimer}}</a>
-          <a class="btn btn-success eqLogicAction" data-action="save"><i class="fa fa-check-circle"></i> {{Sauvegarder}}</a>
-        </div>
-      </fieldset>
-    </form>
-
   </div>
 </div>
 
