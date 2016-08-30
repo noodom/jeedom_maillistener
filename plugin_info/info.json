@@ -1,0 +1,10 @@
+{
+	"id" : "maillistener",
+	"name" : "Mail Listener",
+	"licence" : "AGPL",
+	"author" : "lunarok",
+	"require" : "2.4",
+	"category" : "communication",
+  "hasDependency" : 1,
+  "hasOwnDeamon" : 1
+}
