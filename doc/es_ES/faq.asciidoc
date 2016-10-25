@@ -1,0 +1,26 @@
+[panel,primary]
+.Est-ce que je peux envoyer un mail avec ce plugin ?
+--
+Non, le plugin n'a vocation qu'à rester à l'écoute d'une boite mail et d'indiquer ce qui y arrive.
+--
+
+[panel,primary]
+.Comment utiliser ce plugin en scénario ?
+--
+Exemple, d'un côté via le plugin mail on envoit un mail du style :
+Titre : Saisie Energie
+Texte :
+#Eau#=
+#ECS#=
+
+Ce mail est mis en envoi par un agenda (par semaine, mois ...)
+
+Cette boite mail qui envoit est en surveillance par mail listener également
+Un scénario avec en déclencheur le mail listener et un test sur le titre qui contienne "Saisie Energie" précédemment rentré et on peut récupérer les informations comme sur la capture
+
+image::../images/exemple.png[Image du produit]
+
+En gros, un SI pour vérifier que le titre contient la Saisie Energie
+Après on découpe le corps ligne par ligne et on regarde à quoi correspond chaque ligne et on assigne
+
+--

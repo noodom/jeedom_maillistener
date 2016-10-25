@@ -1,0 +1,5 @@
+[panel,danger]
+.Je n'ai pas d'informations qui remontent
+--
+Il faut bien vérifier les paramètres fournis et les logs
+--
