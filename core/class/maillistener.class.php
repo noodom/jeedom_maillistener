@@ -15,13 +15,10 @@
 * You should have received a copy of the GNU General Public License
 * along with Jeedom. If not, see <http://www.gnu.org/licenses/>.
 */
-
-/* * ***************************Includes********************************* */
 require_once dirname(__FILE__) . '/../../../../core/php/core.inc.php';
 
 
 class maillistener extends eqLogic {
-  /*     * *************************Attributs****************************** */
   public static function dependancy_info() {
     $return = array();
     $return['log'] = 'maillistener_install';
@@ -49,11 +46,7 @@ class maillistener extends eqLogic {
     }
     log::add('maillistener', 'info', 'Lancement du démon maillistener');
 
-    if (!config::byKey('internalPort')) {
-      $url = config::byKey('internalProtocol') . config::byKey('internalAddr') . ':' . config::byKey('internalComplement') . '/core/api/jeeApi.php?api=' . config::byKey('api');
-    } else {
-      $url = config::byKey('internalProtocol') . config::byKey('internalAddr') . ':' . config::byKey('internalPort') . config::byKey('internalComplement') . '/core/api/jeeApi.php?api=' . config::byKey('api');
-    }
+    $url = network::getNetworkAccess('internal') . '/plugins/maillistener/core/api/maillistener.php?apikey=' . jeedom::getApiKey('maillistener');
 
     $service_path = realpath(dirname(__FILE__) . '/../../resources');
     $attach_path = $service_path . '/attachments/';
@@ -218,11 +211,7 @@ class maillistener extends eqLogic {
     $mailCmd->save();
   }
 
-  public static function mailIncoming() {
-    $addr = init('email');
-    $from = init('from');
-    $subject = init('subject');
-    $json = file_get_contents('php://input');
+  public static function mailIncoming($addr,$from,$subject,$json) {
     $body = json_decode($json, true);
     log::add('maillistener', 'debug', 'Mail sur ' . $addr . ' de ' . $from . ' titre ' . $subject . ' message ' . $json);
     $elogic = self::byLogicalId($addr, 'maillistener');
@@ -254,9 +243,7 @@ class maillistener extends eqLogic {
     }
   }
 
-  public static function attachment() {
-    $addr = init('email');
-    $attachment = init('value');
+  public static function attachment($addr,$attachment) {
     log::add('maillistener', 'debug', 'Pièce jointe sur ' . $addr);
     $elogic = self::byLogicalId($addr, 'maillistener');
     if (is_object($elogic)) {
@@ -268,16 +255,6 @@ class maillistener extends eqLogic {
       }
     }
   }
-
-  public static function event() {
-    log::add('maillistener', 'debug', init('messagetype') . ' ' . init('from') . ' ' . init('subject'));
-    $messageType = init('messagetype');
-    switch ($messageType) {
-      case 'mailIncoming' : self::mailIncoming(); break;
-      case 'attachment' : self::attachment(); break;
-    }
-  }
-
 }
 
 class maillistenerCmd extends cmd {
