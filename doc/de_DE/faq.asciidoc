@@ -1,19 +1,19 @@
 [panel,primary]
-.Est-ce que je peux envoyer un mail avec ce plugin ?
+.Kann ich eine E-Mail mit diesem Plugin schicken ?
 --
 Non, le plugin n'a vocation qu'à rester à l'écoute d'une boite mail et d'indiquer ce qui y arrive.
 --
 
 [panel,primary]
-.Comment utiliser ce plugin en scénario ?
+.Wie kann man dieses Plugin in Szenarien verwenden?  
 --
-Exemple, d'un côté via le plugin mail on envoit un mail du style :
-Titre : Saisie Energie
-Texte :
-#Eau#=
+Beispiel, von einer Seite via das Mail-Plugins , man sendet eine Mail des Styles : 
+Titel : Eingang Energie
+Text :
+#Wasser#=
 #ECS#=
 
-Ce mail est mis en envoi par un agenda (par semaine, mois ...)
+Diese E-Mail wurde von einem Kalender gesendet (Woche, Monat ...)
 
 Cette boite mail qui envoit est en surveillance par mail listener également
 Un scénario avec en déclencheur le mail listener et un test sur le titre qui contienne "Saisie Energie" précédemment rentré et on peut récupérer les informations comme sur la capture

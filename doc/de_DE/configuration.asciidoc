@@ -1,36 +1,36 @@
-==== Configuration du plugin
+==== Plugin Konfiguration
 
-Il n'y a pas de configuration du plugin
+Es gibt keine Konfiguration des Plugins
 
-==== Configuration d'un équipement
+==== Konfiguration von Geräten
 
-Il est nécessaire de fournir les informations d'accès à la boite mail :
+Es ist notwendig, Zugangsinformationen für die Mail-Box zur Verfügung zu stellen :
 
-  Compte : le compte à utiliser (suivant la boite, ca peut être par exemple le nom devant @ ou bien toute l'adresse)
+  Konto : Benutzer-Konto (je nach Box, kann es zum Beispiel der Name vor dem @ sein oder die ganze Adresse)
 
-  Mot de passe : le mot de passe quoi
+  Passwort: das Passwort
 
-  Serveur : l'adresse du serveur mail
+  Server : die Adresse des Mail-Servers
 
-  Port : le port du serveur imap
+  Port : der Port des Imap-Servers
 
-  Pièces jointes : indique si les pièces jointes doivent être traitées
+  Anhänge : giebt an, wie Anlagen behandelt werden sollen
 
 La sauvegarde de l'équipement va automatiquement faire démarrer l'écoute de la boite mail
 
 
-==== Informations d'un équipement
+==== Geräte Informationen
 
-Les informations suivantes sont disponibles :
+Folgende Informationen sind verfügbar :
 
-  Expéditeur : l'expéditeur du mail
+  Absender: Absender der Mail
 
-  Sujet : le Sujet
+  Thema: Thema
 
-  Corps : le corps du mail en format textarea
+  Hauptteil : der Hauptteil der e-Mail, im Textarea Format 
 
-  HTML : l'équivalent en HTML
+  HTML : das Äquivalent in HTML
 
-  Pièce jointe : quand les pièces jointes sont traitées, donnent le chemin de sauvegarde de la pièce jointe (pour un traitement par datatransfert par exemple)
+  Anhang : Wenn die Anlagen verarbeitet wird, den Backup-Pfad der Anlage angeben (für eine Verarbeitung mit Datatransfert zum Beispiel)  
 
 Les différentes informations sont de type évènementiel dès qu'un mail est recu l'information est enregistrée. On peut donc utiliser les différentes infos en déclencheur de scénario et en testant leur valeur.

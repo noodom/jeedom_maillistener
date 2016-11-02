@@ -5,7 +5,7 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.3.dev">
-<title>Description</title>
+<title>Beschreibung</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -415,21 +415,21 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="toc" class="toc2">
 <div id="toctitle">Table des matières</div>
 <ul class="sectlevel1">
-<li><a href="#_description">1. Description</a>
+<li><a href="#_beschreibung">1. Beschreibung</a>
 <ul class="sectlevel3">
-<li><a href="#_mail_listener_surveiller_une_boite_mail_et_utiliser_les_propriétés_des_mails_entrants_dans_jeedom">1.1. Mail Listener, surveiller une boite mail et utiliser les propriétés des mails entrants dans Jeedom</a></li>
+<li><a href="#_mail_listener_die_Überwachung_einer_mailbox_und_nutzen_der_eigenschaften_von_eingehenden_e_mails_in_jeedom">1.1. Mail-Listener, die Überwachung einer Mailbox und nutzen der Eigenschaften von eingehenden E-Mails in Jeedom</a></li>
 </ul>
 </li>
-<li><a href="#_configuration">2. Configuration</a>
+<li><a href="#_konfiguration">2. Konfiguration</a>
 <ul class="sectlevel3">
-<li><a href="#_configuration_du_plugin">2.1. Configuration du plugin</a></li>
-<li><a href="#_configuration_d_un_équipement">2.2. Configuration d&#8217;un équipement</a></li>
-<li><a href="#_informations_d_un_équipement">2.3. Informations d&#8217;un équipement</a></li>
+<li><a href="#_plugin_konfiguration">2.1. Plugin Konfiguration</a></li>
+<li><a href="#_konfiguration_von_geräten">2.2. Konfiguration von Geräten</a></li>
+<li><a href="#_geräte_informationen">2.3. Geräte Informationen</a></li>
 </ul>
 </li>
 <li><a href="#_faq">3. FAQ</a></li>
-<li><a href="#_troubleshoting">4. Troubleshoting</a></li>
-<li><a href="#_changelog">5. Changelog</a>
+<li><a href="#_fehlersuche">4. Fehlersuche</a></li>
+<li><a href="#_Änderungsprotokoll">5. Änderungsprotokoll</a>
 <ul class="sectlevel3">
 <li><a href="#_version_1">5.1. Version 1</a></li>
 </ul>
@@ -439,10 +439,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div id="content">
 <div class="sect1">
-<h2 id="_description">1. Description</h2>
+<h2 id="_beschreibung">1. Beschreibung</h2>
 <div class="sectionbody">
 <div class="sect3">
-<h4 id="_mail_listener_surveiller_une_boite_mail_et_utiliser_les_propriétés_des_mails_entrants_dans_jeedom">1.1. Mail Listener, surveiller une boite mail et utiliser les propriétés des mails entrants dans Jeedom</h4>
+<h4 id="_mail_listener_die_Überwachung_einer_mailbox_und_nutzen_der_eigenschaften_von_eingehenden_e_mails_in_jeedom">1.1. Mail-Listener, die Überwachung einer Mailbox und nutzen der Eigenschaften von eingehenden E-Mails in Jeedom</h4>
 <div class="paragraph">
 <p>Ce plugin permet d&#8217;avoir Jeedom qui se connecte à une boite mail et reste à l&#8217;écoute des mails entrants.</p>
 </div>
@@ -454,42 +454,42 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect1">
-<h2 id="_configuration">2. Configuration</h2>
+<h2 id="_konfiguration">2. Konfiguration</h2>
 <div class="sectionbody">
 <div class="sect3">
-<h4 id="_configuration_du_plugin">2.1. Configuration du plugin</h4>
+<h4 id="_plugin_konfiguration">2.1. Plugin Konfiguration</h4>
 <div class="paragraph">
-<p>Il n&#8217;y a pas de configuration du plugin</p>
+<p>Es gibt keine Konfiguration des Plugins</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_configuration_d_un_équipement">2.2. Configuration d&#8217;un équipement</h4>
+<h4 id="_konfiguration_von_geräten">2.2. Konfiguration von Geräten</h4>
 <div class="paragraph">
-<p>Il est nécessaire de fournir les informations d&#8217;accès à la boite mail :</p>
+<p>Es ist notwendig, Zugangsinformationen für die Mail-Box zur Verfügung zu stellen :</p>
 </div>
 <div class="literalblock">
 <div class="content">
-<pre>Compte : le compte à utiliser (suivant la boite, ca peut être par exemple le nom devant @ ou bien toute l'adresse)</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Mot de passe : le mot de passe quoi</pre>
+<pre>Konto : Benutzer-Konto (je nach Box, kann es zum Beispiel der Name vor dem @ sein oder die ganze Adresse)</pre>
 </div>
 </div>
 <div class="literalblock">
 <div class="content">
-<pre>Serveur : l'adresse du serveur mail</pre>
+<pre>Passwort: das Passwort</pre>
 </div>
 </div>
 <div class="literalblock">
 <div class="content">
-<pre>Port : le port du serveur imap</pre>
+<pre>Server : die Adresse des Mail-Servers</pre>
 </div>
 </div>
 <div class="literalblock">
 <div class="content">
-<pre>Pièces jointes : indique si les pièces jointes doivent être traitées</pre>
+<pre>Port : der Port des Imap-Servers</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Anhänge : giebt an, wie Anlagen behandelt werden sollen</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -497,33 +497,33 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect3">
-<h4 id="_informations_d_un_équipement">2.3. Informations d&#8217;un équipement</h4>
+<h4 id="_geräte_informationen">2.3. Geräte Informationen</h4>
 <div class="paragraph">
-<p>Les informations suivantes sont disponibles :</p>
+<p>Folgende Informationen sind verfügbar :</p>
 </div>
 <div class="literalblock">
 <div class="content">
-<pre>Expéditeur : l'expéditeur du mail</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Sujet : le Sujet</pre>
+<pre>Absender: Absender der Mail</pre>
 </div>
 </div>
 <div class="literalblock">
 <div class="content">
-<pre>Corps : le corps du mail en format textarea</pre>
+<pre>Thema: Thema</pre>
 </div>
 </div>
 <div class="literalblock">
 <div class="content">
-<pre>HTML : l'équivalent en HTML</pre>
+<pre>Hauptteil : der Hauptteil der e-Mail, im Textarea Format</pre>
 </div>
 </div>
 <div class="literalblock">
 <div class="content">
-<pre>Pièce jointe : quand les pièces jointes sont traitées, donnent le chemin de sauvegarde de la pièce jointe (pour un traitement par datatransfert par exemple)</pre>
+<pre>HTML : das Äquivalent in HTML</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Anhang : Wenn die Anlagen verarbeitet wird, den Backup-Pfad der Anlage angeben (für eine Verarbeitung mit Datatransfert zum Beispiel)</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -537,23 +537,23 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h2 id="_faq">3. FAQ</h2>
 <div class="sectionbody">
 <div class="openblock panel">
-<div class="title">Est-ce que je peux envoyer un mail avec ce plugin ?</div><div class="content">
+<div class="title">Kann ich eine E-Mail mit diesem Plugin schicken ?</div><div class="content">
 <div class="paragraph">
 <p>Non, le plugin n&#8217;a vocation qu&#8217;à rester à l&#8217;écoute d&#8217;une boite mail et d&#8217;indiquer ce qui y arrive.</p>
 </div>
 </div>
 </div>
 <div class="openblock panel">
-<div class="title">Comment utiliser ce plugin en scénario ?</div><div class="content">
+<div class="title">Wie kann man dieses Plugin in Szenarien verwenden?</div><div class="content">
 <div class="paragraph">
-<p>Exemple, d&#8217;un côté via le plugin mail on envoit un mail du style :
-Titre : Saisie Energie
-Texte :
-<mark>Eau</mark>=
+<p>Beispiel, von einer Seite via das Mail-Plugins , man sendet eine Mail des Styles :
+Titel : Eingang Energie
+Text :
+<mark>Wasser</mark>=
 <mark>ECS</mark>=</p>
 </div>
 <div class="paragraph">
-<p>Ce mail est mis en envoi par un agenda (par semaine, mois &#8230;&#8203;)</p>
+<p>Diese E-Mail wurde von einem Kalender gesendet (Woche, Monat &#8230;&#8203;)</p>
 </div>
 <div class="paragraph">
 <p>Cette boite mail qui envoit est en surveillance par mail listener également
@@ -574,7 +574,7 @@ Après on découpe le corps ligne par ligne et on regarde à quoi correspond cha
 </div>
 </div>
 <div class="sect1">
-<h2 id="_troubleshoting">4. Troubleshoting</h2>
+<h2 id="_fehlersuche">4. Fehlersuche</h2>
 <div class="sectionbody">
 <div class="openblock panel">
 <div class="title">Ich bekomme keine Informationen, die zurückreichen</div><div class="content">
@@ -587,7 +587,7 @@ Après on découpe le corps ligne par ligne et on regarde à quoi correspond cha
 </div>
 </div>
 <div class="sect1">
-<h2 id="_changelog">5. Changelog</h2>
+<h2 id="_Änderungsprotokoll">5. Änderungsprotokoll</h2>
 <div class="sectionbody">
 <div class="sect3">
 <h4 id="_version_1">5.1. Version 1</h4>
