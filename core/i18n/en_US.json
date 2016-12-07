@@ -1,7 +1,7 @@
 {
     "plugins\/maillistener\/desktop\/php\/maillistener.php": {
-        "Ajouter un équipement": "Ajouter un équipement",
-        "Rechercher": "Rechercher",
+        "Ajouter un équipement": "Add an equipment",
+        "Rechercher": "Search",
         "Mes maillistener": "Mes maillistener",
         "Sauvegarder": "Sauvegarder",
         "Supprimer": "Supprimer",
