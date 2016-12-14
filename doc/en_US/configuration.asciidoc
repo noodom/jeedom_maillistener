@@ -1,6 +1,6 @@
 ==== The plugin configuration
 
-Il n'y a pas de configuration du plugin
+The plugin does not have configuration.
 
 ==== Configuration d'un équipement
 
