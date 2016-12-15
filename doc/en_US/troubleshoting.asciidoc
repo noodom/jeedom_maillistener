@@ -1,5 +1,5 @@
 [panel,danger]
-.Je n'ai pas d'informations qui remontent
+. I don't have any information going back
 --
 Il faut bien vérifier les paramètres fournis et les logs
 --

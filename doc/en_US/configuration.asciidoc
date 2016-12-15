@@ -2,7 +2,7 @@
 
 The plugin does not have configuration.
 
-==== Configuration d'un équipement
+==== Equipment Configuration 
 
 Il est nécessaire de fournir les informations d'accès à la boite mail :
 
