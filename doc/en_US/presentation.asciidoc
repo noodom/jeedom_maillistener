@@ -1,5 +1,5 @@
 ==== Mail Listener, monitor a mailbox and use the properties of the incoming mails in Jeedom
 
-Ce plugin permet d'avoir Jeedom qui se connecte à une boite mail et reste à l'écoute des mails entrants.
+This plugin allows you to have Jeedom that connects to a mailbox and stays tuned to incoming mail.
 
 Sur un nouvel email, il indiquera les propriétés de celui-ci qui seront visible et utilisable dans Jeedom

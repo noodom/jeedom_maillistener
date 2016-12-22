@@ -1,5 +1,5 @@
 [panel,primary]
-.Est-ce que je peux envoyer un mail avec ce plugin ?
+.Can I send an email with this plugin?
 --
 Non, le plugin n'a vocation qu'à rester à l'écoute d'une boite mail et d'indiquer ce qui y arrive.
 --
