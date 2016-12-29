@@ -2,4 +2,4 @@
 
 This plugin allows you to have Jeedom that connects to a mailbox and stays tuned to incoming mail.
 
-Sur un nouvel email, il indiquera les propriétés de celui-ci qui seront visible et utilisable dans Jeedom
+On a new email, it will show the properties that will be visible and usable in Jeedom
