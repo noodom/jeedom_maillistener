@@ -19,6 +19,15 @@ require_once dirname(__FILE__) . '/../../../../core/php/core.inc.php';
 
 
 class maillistener extends eqLogic {
+      public static function cronDaily() {
+        foreach (eqLogic::byType('maillistener', true) as $eqlogic) {
+            foreach ($eqlogic->getCmd() as $cmd) {
+                $cmd->setConfiguration('repeatEventManagement','always');
+                $cmd->save();
+            }
+        }
+    }
+  
   public static function dependancy_info() {
     $return = array();
     $return['log'] = 'maillistener_install';
