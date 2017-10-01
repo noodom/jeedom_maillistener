@@ -54,14 +54,6 @@ sudo rm -rf node_modules
 
 echo 80 > /tmp/maillistener_dep
 npm install
-npm install request
-echo 83 > /tmp/maillistener_dep
-npm install imap
-echo 85 > /tmp/maillistener_dep
-npm install mailparser
-echo 88 > /tmp/maillistener_dep
-npm install async
-echo 90 > /tmp/maillistener_dep
 
 rm -rf attachments
 mkdir attachments
