@@ -11,10 +11,10 @@ if [ ! -d "$DIRECTORY" ]; then
 fi
 sudo chown -R www-data $DIRECTORY
 echo 10 > /tmp/maillistener_dep
-actual=`nodejs -v`;
+actual=`nodejs -v | awk -F v '{ print $2 }'`;
 echo "Version actuelle : ${actual}"
 
-if [[ $actual != *"0."* ]]
+if [[ $actual -g 4 ]]
 then
   echo "Ok, version suffisante";
 else
