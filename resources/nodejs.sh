@@ -12,7 +12,7 @@ fi
 sudo chown -R www-data $DIRECTORY
 echo 10 > /tmp/maillistener_dep
 if [ -x /usr/bin/nodejs ]; then
-  actual=`nodejs -v | awk -F v '{ print $2 }'`;
+  actual=`nodejs -v | awk -F v '{ print $2 }' | awk -F . '{ print $1 }'`;
   echo "Version actuelle : ${actual}"
 else
   actual=0;
