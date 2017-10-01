@@ -20,7 +20,7 @@ else
 fi
 
 
-if [[ $actual -g 4 ]]
+if [[ $actual -ge 4 ]]
 then
   echo "Ok, version suffisante";
 else
