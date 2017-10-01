@@ -14,7 +14,7 @@ echo 10 > /tmp/maillistener_dep
 actual=`nodejs -v`;
 echo "Version actuelle : ${actual}"
 
-if [[ $actual == *"4."* || $actual == *"5."* ]]
+if [[ $actual != *"0."* ]]
 then
   echo "Ok, version suffisante";
 else
@@ -31,20 +31,9 @@ else
     sudo dpkg -i node_latest_armhf.deb
     sudo ln -s /usr/local/bin/node /usr/local/bin/nodejs
     rm node_latest_armhf.deb
-  fi
-
-  if [[ $arch == "aarch64" ]]
-  then
-    wget http://dietpi.com/downloads/binaries/c2/nodejs_5-1_arm64.deb
-    sudo dpkg -i nodejs_5-1_arm64.deb
-    sudo ln -s /usr/local/bin/node /usr/local/bin/nodejs
-    rm nodejs_5-1_arm64.deb
-  fi
-
-  if [[ $arch != "aarch64" && $arch != "armv6l" ]]
-  then
+  else
     echo "Utilisation du dépot officiel"
-    curl -sL https://deb.nodesource.com/setup_5.x | sudo -E bash -
+    curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
     sudo apt-get install -y nodejs
   fi
   new=`nodejs -v`;
