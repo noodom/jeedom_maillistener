@@ -11,8 +11,14 @@ if [ ! -d "$DIRECTORY" ]; then
 fi
 sudo chown -R www-data $DIRECTORY
 echo 10 > /tmp/maillistener_dep
-actual=`nodejs -v | awk -F v '{ print $2 }'`;
-echo "Version actuelle : ${actual}"
+if [ -x /usr/bin/nodejs ]; then
+  actual=`nodejs -v | awk -F v '{ print $2 }'`;
+  echo "Version actuelle : ${actual}"
+else
+  actual=0;
+  echo "Nodejs non installé"
+fi
+
 
 if [[ $actual -g 4 ]]
 then
