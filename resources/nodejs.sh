@@ -1,16 +1,16 @@
 #!/bin/bash
 cd $1
-touch /tmp/maillistener_dep
+touch /tmp/${2}_dep
 echo "Début de l'installation"
 
-echo 0 > /tmp/maillistener_dep
+echo 0 > /tmp/${2}_dep
 DIRECTORY="/var/www"
 if [ ! -d "$DIRECTORY" ]; then
   echo "Création du home www-data pour npm"
   sudo mkdir $DIRECTORY
 fi
 sudo chown -R www-data $DIRECTORY
-echo 10 > /tmp/maillistener_dep
+echo 10 > /tmp/${2}_dep
 if [ -x /usr/bin/nodejs ]; then
   actual=`nodejs -v | awk -F v '{ print $2 }' | awk -F . '{ print $1 }'`;
   echo "Version actuelle : ${actual}"
@@ -28,7 +28,7 @@ else
   echo "Suppression du Nodejs existant et installation du paquet recommandé"
   sudo apt-get -y --purge autoremove nodejs npm
   arch=`arch`;
-  echo 30 > /tmp/maillistener_dep
+  echo 30 > /tmp/${2}_dep
   if [[ $arch == "armv6l" ]]
   then
     echo "Raspberry 1 détecté, utilisation du paquet pour armv6"
@@ -46,18 +46,18 @@ else
   echo "Version actuelle : ${new}"
 fi
 
-echo 70 > /tmp/maillistener_dep
+echo 70 > /tmp/${2}_dep
 
 sudo rm -rf node_modules
 
-echo 80 > /tmp/maillistener_dep
+echo 80 > /tmp/${2}_dep
 npm install
 
-rm -rf attachments
-mkdir attachments
+echo 90 > /tmp/${2}_dep
+sh specific.sh
 
 sudo chown -R www-data node_modules
 
-rm /tmp/maillistener_dep
+rm /tmp/${2}_dep
 
 echo "Fin de l'installation"

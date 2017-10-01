@@ -27,7 +27,7 @@ class maillistener extends eqLogic {
             }
         }
     }
-  
+
   public static function dependancy_info() {
     $return = array();
     $return['log'] = 'maillistener_install';
@@ -44,7 +44,7 @@ class maillistener extends eqLogic {
 
   public static function dependancy_install() {
     $install_path = dirname(__FILE__) . '/../../resources';
-    passthru('/bin/bash ' . $install_path . '/nodejs.sh ' . $install_path . ' >> ' . log::getPathToLog('maillistener_install') . ' 2>&1 &');
+    passthru('/bin/bash ' . $install_path . '/nodejs.sh ' . $install_path . ' >> ' . log::getPathToLog('maillistener_install') . ' maillistener 2>&1 &');
   }
 
   public static function deamon_start($_debug = false) {

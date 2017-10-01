@@ -2,7 +2,8 @@
   "name": "JeedomMaillistener",
   "version": "0.0.1",
   "description": "Node to listen mail and send to Jeedom",
-  "license": "GPL",
+  "license": "GPL-3.0",
+  "repository": "npm/npm",
   "dependencies": {
     "request": "latest",
     "imap": "latest",
