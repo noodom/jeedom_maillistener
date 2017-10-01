@@ -48,8 +48,6 @@ fi
 
 echo 70 > /tmp/maillistener_dep
 
-npm cache clean
-sudo npm cache clean
 sudo rm -rf node_modules
 
 echo 80 > /tmp/maillistener_dep

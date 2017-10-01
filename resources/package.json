@@ -1,6 +1,6 @@
 {
   "name": "JeedomMaillistener",
-  "version": "1",
+  "version": "1.0",
   "description": "Node to listen mail and send to Jeedom",
   "dependencies": {
     "request": "latest",
