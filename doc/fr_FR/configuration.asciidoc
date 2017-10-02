@@ -33,4 +33,4 @@ Les informations suivantes sont disponibles :
 
   Pièce jointe : quand les pièces jointes sont traitées, donnent le chemin de sauvegarde de la pièce jointe (pour un traitement par datatransfert par exemple)
 
-Les différentes informations sont de type évènementiel dès qu'un mail est recu l'information est enregistrée. On peut donc utiliser les différentes infos en déclencheur de scénario et en testant leur valeur.
+Les différentes informations sont de type évènementiel : dès qu'un mail est reçu, l'information est enregistrée. On peut donc utiliser les différentes infos en déclencheur de scénario et en testant leur valeur.
